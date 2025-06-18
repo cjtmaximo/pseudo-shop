@@ -11,7 +11,42 @@ function display_products():
 	for each product in product_list:
 		print product
 
+# Numerical filters are minimum values, while color and brand filters are exact matches
+# Filters are optional
 function filter_products(filters):
 	for each product in product_list:
-		if product.width >= filters.width and product.height >= filters.height and product.weight >= filters.weight and product.color == filters.color and product.brand == filters.brand:
+		# Initially, the product is a match
+		is_match = TRUE
+
+		# Filter by width (TRUE if greater than or equal to filters.width, FALSE otherwise)
+		if filters.width is not NULL and product.width < filters.width:
+			is_match = FALSE
+		end if
+
+		# Filter by height (TRUE if greater than or equal to filters.height, FALSE otherwise)
+		if filters.height is not NULL and product.height < filters.height:
+			is_match = FALSE
+		end if
+		
+		# Filter by length (TRUE if greater than or equal to filters.length, FALSE otherwise)
+		if filters.length is not NULL and product.length < filters.length:
+			is_match = FALSE
+		end if
+		
+		# Filter by weight (TRUE if greater than or equal to filters.weight, FALSE otherwise)
+		if filters.weight is not NULL and product.weight < filters.weight:
+			is_match = FALSE
+		end if
+		
+		# Filter by color (TRUE if equal to filters.color, FALSE otherwise)
+		if filters.color is not NULL and product.color != filters.color:
+			is_match = FALSE
+		end if
+		
+		# Filter by brand (TRUE if equal to filters.brand, FALSE otherwise)
+		if filters.brand is not NULL and product.brand != filters.brand:
+			is_match = FALSE
+		end if
+
+		if is_match is TRUE:
 			add product to filtered_product_list
