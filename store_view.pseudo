@@ -3,6 +3,9 @@
 # Placeholder function:
 # function display_products()
 
+# Display list of products
 function display_products():
+	# Loop through each product in the product_list
 	for each product in product_list:
-		print product
+		# Print all product attributes
+		print product.name, product.width, product.height, product.length, product.weight, product.color, product.brand

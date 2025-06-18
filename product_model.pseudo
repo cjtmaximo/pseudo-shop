@@ -14,6 +14,7 @@
 # Placeholder product list
 product_list = []
 
+# Define the class Product and its attributes
 class Product
 	attributes: name, width, height, length, weight, color, brand
 
@@ -26,6 +27,9 @@ class Product
 		this.color = color
 		this.brand = brand
 
+# Create a new product and add it to the product list
 function add_product(name, width, height, length, weight, color, brand):
-	new_product = new Product( name, width, height, length, weight, color, brand }
+	# Create a new product object
+	new_product = new Product( name, width, height, length, weight, color, brand }	
+	# Add the new product to the list of products
 	add new_product to product_list
