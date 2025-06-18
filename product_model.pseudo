@@ -13,3 +13,7 @@ product = {
 
 # Placeholder product list
 product_list = []
+
+function add_product(name, width, height, length, weight, color, brand):
+	new_product = { name: name, width: width, height: height, length: length, weight: weight, color: color, brand: brand }
+	add new_product to product_list
