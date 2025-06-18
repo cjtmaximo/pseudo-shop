@@ -12,3 +12,6 @@ function display_products():
 		print product
 
 function filter_products(filters):
+	for each product in product_list:
+		if product.width >= filters.width and product.height >= filters.height and product.weight >= filters.weight and product.color == filters.color and product.brand == filters.brand:
+			add product to filtered_product_list
