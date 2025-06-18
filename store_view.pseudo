@@ -2,7 +2,10 @@
 
 # Placeholder function:
 # function display_products()
+# function filter_products(filters)
 
 function display_products():
 	for each product in product_list:
 		print product
+
+function filter_products(filters):
