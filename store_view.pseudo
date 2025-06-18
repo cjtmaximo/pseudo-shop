@@ -54,3 +54,4 @@ function filter_products(filters):
 
 		if is_match is TRUE:
 			add product to filtered_product_list
+		end if
