@@ -6,6 +6,15 @@
 
 user_list = []
 
+# Define User class and attributes
+class User
+	attributes: name, email, password
+
+	constructor(name, email, password):
+		this.name = name
+		this.email = email
+		this.password = password
+
 # Create a new user and add them to the user list 
 function create_user(name, email, password):
 	# Validate that input fields are not empty
@@ -17,11 +26,12 @@ function create_user(name, email, password):
 		if user.email == email:
 			return "User already exists"
 	
-	# Create a new user
-	new_user = { name: name, email: email, password: password }
+	# Create a new user object
+	new_user = new User(name, email, password)
 	
 	# Add the new user to the list of registered users
 	add new_user to user_list
+	return "User created successfully!"
 
 # Log in a user using email and password credentials
 function login_user(email, password):
