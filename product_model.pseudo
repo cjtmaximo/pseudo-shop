@@ -1,19 +1,35 @@
 # Handles product data
 
 # Sample structure:
-product = {
-     name: "Sample Product",
-     width: 10,
-     height: 5,
-     length: 20,
-     weight: 1.5,
-     color: "red",
-     brand: "Generic"
- }
+# product = {
+#     name: "Sample Product",
+#     width: 10,
+#     height: 5,
+#     length: 20,
+#     weight: 1.5,
+#     color: "red",
+#     brand: "Generic"
+# }
 
 # Placeholder product list
 product_list = []
 
+# Define the class Product and its attributes
+class Product
+	attributes: name, width, height, length, weight, color, brand
+
+	constructor(name, width, height, length, weight, color, brand):
+		this.name = name
+		this.width = width
+		this.height = height
+		this.length = length
+		this.weight = weight
+		this.color = color
+		this.brand = brand
+
+# Create a new product and add it to the product list
 function add_product(name, width, height, length, weight, color, brand):
-	new_product = { name: name, width: width, height: height, length: length, weight: weight, color: color, brand: brand }
+	# Create a new product object
+	new_product = new Product( name, width, height, length, weight, color, brand }	
+	# Add the new product to the list of products
 	add new_product to product_list

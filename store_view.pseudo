@@ -7,9 +7,11 @@
 # Filtered product list (based on passed filters)
 filtered_product_list = []
 
+# Display list of products
 function display_products():
+	# Loop through each product in the product_list
 	for each product in product_list:
-		print product
+		print product.name, product.width, product.height, product.length, product.weight, product.color, product.brand
 
 # Numerical filters are minimum values, while color and brand filters are exact matches
 # Filters are optional
