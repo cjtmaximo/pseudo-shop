@@ -39,12 +39,14 @@ function filter_products(filters):
 		end if
 		
 		# Filter by color (TRUE if equal to filters.color, FALSE otherwise)
-		if filters.color is not NULL and product.color != filters.color:
+		# lower() is used for converting strings to lower case to allow for case-insensitive comparisons
+		if filters.color is not NULL and lower(product.color) != lower(filters.color):
 			is_match = FALSE
 		end if
 		
 		# Filter by brand (TRUE if equal to filters.brand, FALSE otherwise)
-		if filters.brand is not NULL and product.brand != filters.brand:
+		# lower() is used for converting strings to lower case to allow for case-insensitive comparisons
+		if filters.brand is not NULL and lower(product.brand) != lower(filters.brand):
 			is_match = FALSE
 		end if
 
