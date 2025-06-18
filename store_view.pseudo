@@ -4,12 +4,9 @@
 # function display_products()
 # function filter_products(filters)
 
-# Filtered product list (based on passed filters)
-filtered_product_list = []
-
 # Display list of products
 function display_products():
-	# Loop through each product in the product_list
+	# Loop through each product in the filtered_product_list
 	for each product in product_list:
 		print product.name
 		print product.width, product.height, product.length 
@@ -20,6 +17,9 @@ function display_products():
 # Numerical filters are minimum values, while color and brand filters are exact matches
 # Filters are optional
 function filter_products(filters):
+	# Filtered product list (based on passed filters)
+	filtered_product_list = []
+
 	for each product in product_list:
 		# Initially, the product is a match
 		is_match = TRUE
@@ -59,3 +59,5 @@ function filter_products(filters):
 		if is_match is TRUE:
 			add product to filtered_product_list
 		end if
+
+	return filtered_product_list
