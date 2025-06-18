@@ -4,6 +4,9 @@
 # function display_products()
 # function filter_products(filters)
 
+# Filtered product list (based on passed filters)
+filtered_product_list = []
+
 function display_products():
 	for each product in product_list:
 		print product
