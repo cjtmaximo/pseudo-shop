@@ -40,5 +40,5 @@ function login_user(email, password):
 		# Check if the email and password matches
 		if user.email == email and user.password == password:
 			return "Login successful"
-		# Return failure message if no matching credentials are found
-		return "Login failed"
+	# Return failure message if no matching credentials are found
+	return "Login failed"
