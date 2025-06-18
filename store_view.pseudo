@@ -6,8 +6,11 @@
 
 # Display list of products
 function display_products():
+	# Get the list of filtered products
+	filtered_product_list = filter_products(filters)
+
 	# Loop through each product in the filtered_product_list
-	for each product in product_list:
+	for each product in filtered_product_list:
 		print product.name
 		print product.width, product.height, product.length 
 		print product.weight
