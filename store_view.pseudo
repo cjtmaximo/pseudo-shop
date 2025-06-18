@@ -3,3 +3,6 @@
 # Placeholder function:
 # function display_products()
 
+function display_products():
+	for each product in product_list:
+		print product
